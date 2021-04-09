@@ -7,12 +7,12 @@ import util.Constants;
 
 public class MainController extends BaseController {
 	private static RoomController roomController = null;
-	private static FileController utilController = null;
+	private static FileController fileController = null;
 
 	public MainController() {
 		super();
 		roomController = new RoomController();
-		utilController = new FileController();
+		fileController = new FileController();
 	}
 
 	public void execute() {
@@ -63,10 +63,10 @@ public class MainController extends BaseController {
 			roomController.findRoomByCustomerName();
 			break;
 		case "S":
-			utilController.storeProgramDataIntoFile();
+			fileController.storeProgramDataIntoFile();
 			break;
 		case "L":
-			utilController.loadProgramDataFromFile();
+			fileController.loadProgramDataFromFile();
 			break;
 		case "O":
 			roomController.viewRoomsSortedByCustomerName();
